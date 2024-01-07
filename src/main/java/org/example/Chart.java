@@ -52,7 +52,7 @@ public class Chart {
 
         for (String country : countries) {
             // SQL-запрос для получения среднего количества студентов в стране
-            String query = "пр " +
+            String query = "SELECT AVG(school_stat.students) AS avg_students " +
                     "FROM schools " +
                     "JOIN school_stat ON schools.school_id = school_stat.school_id " +
                     "WHERE schools.county = ?";
